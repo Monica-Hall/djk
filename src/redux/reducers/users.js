@@ -3,13 +3,14 @@ import axios from "axios";
 const REGISTER_USER = "REGISTER_USER"; 
 const LOGIN_USER = "LOGIN_USER"; 
 const LOGOUT_USER = "LOGOUT_USER"; 
+const GET_USER = "GET_USER"; 
 
 const initialState = {
-    data: null, 
+    user: {}, 
     loading: false
 }
 
-export default function(state = initialState, action) {
+export default function reducer(state = initialState, action) {
     let {type, payload} = action
 
     switch(type) {
@@ -23,7 +24,7 @@ export default function(state = initialState, action) {
         case REGISTER_USER + "_FULFILLED": 
             return {
                 ...state,
-                data: payload.data, 
+                user: payload.data, 
                 loading: false
             }
         case REGISTER_USER + "_REJECTED": 
@@ -41,7 +42,7 @@ export default function(state = initialState, action) {
         case LOGIN_USER + "_FULFILLED": 
             return {
                 ...state,
-                data: payload.data, 
+                user: payload.data, 
                 loading: false
             }
         case LOGIN_USER + "_REJECTED": 
@@ -59,10 +60,28 @@ export default function(state = initialState, action) {
         case LOGOUT_USER + "_FULFILLED": 
             return {
                 ...state,
-                data: null, 
+                user: null, 
                 loading: false
             }
         case LOGOUT_USER + "_REJECTED": 
+            return {
+                ...state,
+                loading: false
+            }
+
+        //USER SESSION 
+        case GET_USER + "_PENDING":
+            return {
+                ...state, 
+                loading: true
+            }
+        case GET_USER + "_FULFILLED": 
+            return {
+                ...state,
+                user: payload.data, 
+                loading: false
+            }
+        case GET_USER + "_REJECTED": 
             return {
                 ...state,
                 loading: false
@@ -91,5 +110,13 @@ export function logout() {
     return {
         type: LOGOUT_USER, 
         payload: axios.delete("/auth/logout")
+    }
+}
+
+export function getUser() {
+    let user = axios.get("/auth/get_user").then(res => res.data)
+    return {
+        type: GET_USER, 
+        payload: user
     }
 }

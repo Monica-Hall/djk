@@ -8,7 +8,7 @@ const massive = require("massive");
 const {CONNECTION_STRING, SERVER_PORT, SESSION_SECRET} = process.env; 
 const {register, login, logout, getUser} = require("./controllers/authCtrl");
 const {createSong, updateSong, deleteSong, getSongs} = require("./controllers/songCtrl"); 
-const {adminOnly} = require ("./middleware/adminOnly"); 
+// const {adminOnly} = require ("./middleware/adminOnly"); 
 
 //TOP LEVEL 
 const app = express(); 

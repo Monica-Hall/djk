@@ -8,7 +8,7 @@ const initialState = {
     loading: false
 }
 
-export default function(state = initialState, action) {
+export default function reducer(state = initialState, action) {
     let {type, payload} = action
 
     switch(type) {
@@ -57,13 +57,13 @@ export default function(state = initialState, action) {
 export function editSong(id) {
     return {
         type: "", 
-        payload: axios.post("api/edit_song/:id", id)
+        payload: axios.post("api/edit_song/:form_id", id)
     }
 }
 
 export function deleteSong(id) {
     return {
         type: "", 
-        payload: axios.delete("/api/delete_song/:id", id)
+        payload: axios.delete("/api/delete_song/:form_id", id)
     }
 }

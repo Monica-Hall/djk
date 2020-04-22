@@ -17,8 +17,7 @@ module.exports = {
     deleteSong: async (req, res) => {
         try {
             const db = req.app.get("db")
-            // const {id} = req.params
-            const {form_id} = req.params // changed from req.session.user && tried req.params
+            const {form_id} = req.params 
             
             const song = await db.songs.delete_song({form_id}) 
             res.status(200).send(song)
@@ -47,10 +46,8 @@ module.exports = {
     getSongs: async (req, res) => {
         try {
             const db = req.app.get("db")
-            // const {form_id} = req.session.user // is this right? THIS WILL NOT BE COMING FROM REQ.SESSION.USER
         
-
-            const song = await db.songs.get_songs() //may need to change params based on above 
+            const song = await db.songs.get_songs()
             res.status(200).send(song)
 
         } catch (error) {
