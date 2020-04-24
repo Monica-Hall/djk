@@ -20,7 +20,6 @@ VALUES
 CREATE TABLE form (
     form_id SERIAL PRIMARY KEY, 
     user_id INT REFERENCES users(user_id), 
-    -- name VARCHAR(25)  REFERENCES users(name), 
     artist VARCHAR(30), 
     title VARCHAR(50), 
     requests VARCHAR(150), 

@@ -3,7 +3,7 @@ import axios from "axios";
 const REGISTER_USER = "REGISTER_USER"; 
 const LOGIN_USER = "LOGIN_USER"; 
 const LOGOUT_USER = "LOGOUT_USER"; 
-const GET_USER = "GET_USER"; 
+// const GET_USER = "GET_USER"; 
 
 const initialState = {
     user: {}, 
@@ -51,7 +51,7 @@ export default function reducer(state = initialState, action) {
                 loading: false
             }
 
-        //LOGOUT
+        // LOGOUT
         case LOGOUT_USER + "_PENDING": 
             return {
                 ...state,
@@ -70,36 +70,36 @@ export default function reducer(state = initialState, action) {
             }
 
         //USER SESSION 
-        case GET_USER + "_PENDING":
-            return {
-                ...state, 
-                loading: true
-            }
-        case GET_USER + "_FULFILLED": 
-            return {
-                ...state,
-                user: payload.data, 
-                loading: false
-            }
-        case GET_USER + "_REJECTED": 
-            return {
-                ...state,
-                loading: false
-            }
+        // case GET_USER + "_PENDING":
+        //     return {
+        //         ...state, 
+        //         loading: true
+        //     }
+        // case GET_USER + "_FULFILLED": 
+        //     return {
+        //         ...state,
+        //         user: payload.data, 
+        //         loading: false
+        //     }
+        // case GET_USER + "_REJECTED": 
+        //     return {
+        //         ...state,
+        //         loading: false
+        //     }
         
         default:
             return state
     }
 }
 
-export function register(userInfo) { // when passing the params to the component, we will be calling from req.body
+export function register(userInfo) {
     return {
         type: REGISTER_USER, 
         payload: axios.post("/auth/register", userInfo)
     }
 } 
 
-export function login(userInfo) { // same as above 
+export function login(userInfo) { 
     return {
         type: LOGIN_USER, 
         payload: axios.post("/auth/login", userInfo)
@@ -113,10 +113,10 @@ export function logout() {
     }
 }
 
-export function getUser() {
-    let user = axios.get("/auth/get_user").then(res => res.data)
-    return {
-        type: GET_USER, 
-        payload: user
-    }
-}
+// export function getUser() {
+//     let user = axios.get("/auth/get_user").then(res => res.data)
+//     return {
+//         type: GET_USER, 
+//         payload: user
+//     }
+// }

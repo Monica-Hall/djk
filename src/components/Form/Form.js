@@ -1,10 +1,7 @@
 import React, { Component } from "react"; 
 import {Redirect} from "react-router-dom"; 
-
-
-//link the submit button to dash
-    // idea: toggle redirect function from auth component 
-        // creat an if statement 
+import {createSong} from "../../redux/reducers/songs"; 
+import { connect } from "react-redux";
 
 class Form extends Component {
     constructor(props) {
@@ -13,7 +10,8 @@ class Form extends Component {
         this.state = {
             artist: "", 
             title: "", 
-            requests: ""
+            requests: "",
+            redirect: false
         }
     }
 
@@ -24,7 +22,8 @@ class Form extends Component {
         })
     }
 
-    handleClick = () => {
+    handleClick = (e) => {
+        e.preventDefault()
         let {artist, title, requests} = this.state
         this.props.createSong({artist, title, requests})
 
@@ -33,6 +32,8 @@ class Form extends Component {
             title: "", 
             requests: ""
         })
+
+        this.toggleRedirect()
     }
 
     toggleRedirect = () => {
@@ -44,18 +45,18 @@ class Form extends Component {
     }
 
     render() {
-
+        // console.log(this.props)
         const {redirect} = this.state
 
         if(redirect) {
-            return <Redirect to="/dash"/>
+            return <Redirect to="/dashboard"/>
         }
 
         return (
             <div>
-                    {/* want a uniquie greeting, tried this.props.user.name, this.props.users.name */}
+                    {/* want a uniquie greeting, try this.props.users.user.name */}
                 <p>Tell that funky DJ to put that record on.</p>
-                <form onSubmit={this.handleChange}>
+                <form onSubmit={this.handleClick}>
                     <input
                         name="artist"
                         type="text"
@@ -75,18 +76,19 @@ class Form extends Component {
                     <input
                         name="requests"
                         type="text"
-                        value={this.state.password}
+                        value={this.state.requests}
                         onChange={(e) => this.handleChange(e.target.name, e.target.value)}
-                        placeholder="Enter special request here. Example: Play the remix version by so and so..."
+                        placeholder="Enter special request. Example: Play the remix version by so and so..."
                     />
-                    <button 
-                    onClick={this.handleClick} 
-                    redirect={this.toggleRedirect}
-                    >submit</button>
+                    <button>submit</button>
                 </form>
             </div>
         )
     }
 }
 
-export default Form
+const mapStateToProps = state => state
+
+const mapDispatchToProps = {createSong}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Form)

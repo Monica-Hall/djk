@@ -28,7 +28,7 @@ module.exports = {
         }
     }, 
 
-    updateSong: async (req, res) => {
+    editSong: async (req, res) => {
         try {
             const db = req.app.get("db")
             const {form_id} = req.params

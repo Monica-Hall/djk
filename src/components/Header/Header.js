@@ -1,14 +1,45 @@
 import React, { Component } from "react"; 
 import {connect} from "react-redux"; 
-import {getUser} from "../../redux/reducers/users"; 
+import {logout} from "../../redux/reducers/users"; 
+import {Redirect} from "react-router-dom"; 
 
 class Header extends Component {
     
-    componentDidMount() {
-        this.props.getUser()
+    constructor(props){
+        super(props)
+
+        this.state = {
+            song: [], 
+            redirect: false
+        }
+    }
+
+    handleLogout = () => {
+        this.props.logout().then(({data}) => {
+            this.setState({
+                songs: data, 
+                redirect: true
+            })
+        }).catch(err => {
+            console.log("logout error:", err)
+        })
+    }
+
+    toggleRedirect = () => {
+        let {redirect} = this.state
+
+        this.setState({
+            redirect: !redirect
+        })
     }
 
     render() {
+        const {redirect} = this.state
+
+        if(redirect) {
+            return <Redirect to="/"/>
+        }
+
         return (
             <div>
                 This is Header Component 
@@ -24,6 +55,15 @@ class Header extends Component {
                         Welcome {this.props.users.name} 
                     </div>
                 } */}
+
+                <div>
+                    {
+                        this.props.users.user &&
+                        <div>
+                        <button onClick={this.handleLogout}>sign out</button>
+                        </div>
+                    }
+                </div>
             </div>
         )
     }
@@ -31,4 +71,5 @@ class Header extends Component {
 
 const mapStateToProps = state => state; 
 
-export default connect(mapStateToProps, {getUser})(Header)
+export default connect(mapStateToProps, {logout})(Header)
+// export default Header
