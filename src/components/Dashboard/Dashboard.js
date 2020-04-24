@@ -64,7 +64,8 @@ class Dashboard extends Component {
                     <View 
                     song={song}
                     user={this.props.users.user}
-                    deleteSong={this.deleteSong}/>
+                    deleteSong={this.deleteSong}
+                    editSong={this.editSong}/>
                 </div>
             )
         })
