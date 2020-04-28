@@ -1,7 +1,6 @@
 import React, { Component } from "react"; 
 import axios from "axios"; 
-import {Redirect} from "react-router-dom"; 
-import View from "./View"; 
+import View from "./View";
 import {connect} from "react-redux"; 
 
 class Dashboard extends Component {
@@ -39,24 +38,8 @@ class Dashboard extends Component {
         })
     }
 
-    editSong = form_id => {
-        axios.put(`/api/edit_song/${form_id}`).then(({data}) => {
-            this.setState({
-                songs: data
-            })
-        }).catch(err => {
-            console.log("error editing song:", err)
-        })
-    }
 
     render() {
-        // console.log(this.props)
-        let {redirect} = this.state
-
-        //to add more songs 
-        if(redirect) {
-            return <Redirect to="/form"/>
-        }
 
         const mappedSongs = this.state.songs.map(song => {
             return (
@@ -65,7 +48,8 @@ class Dashboard extends Component {
                     song={song}
                     user={this.props.users.user}
                     deleteSong={this.deleteSong}
-                    editSong={this.editSong}/>
+                    getSongs={this.getSongs}
+                    />
                 </div>
             )
         })

@@ -77,7 +77,7 @@ export default function reducer(state = initialState, action) {
 export function editSong(id, body) {
     return {
         type: EDIT_SONG, 
-        payload: axios.post(`api/edit_song/${id}`, body)
+        payload: axios.put(`/api/edit/${id}`, body)
     }
 }
 

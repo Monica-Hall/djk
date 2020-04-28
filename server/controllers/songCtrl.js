@@ -32,9 +32,9 @@ module.exports = {
         try {
             const db = req.app.get("db")
             const {form_id} = req.params
-            const {artist, title, requests} = req.body            
+            const {title} = req.body            
 
-            const song = await db.songs.update_song({form_id, artist, title, requests})
+            const song = await db.songs.update_song({form_id, title})
             res.status(200).send(song)
 
         } catch (error) {

@@ -46,7 +46,7 @@ app.delete("/auth/logout", logout);
 //ENDPOINTS - FULL CRUD: GET, POST, PUT, DELETE
 app.get("/api/get_songs", getSongs) 
 app.post("/api/add_song", createSong)
-app.put("/api/edit_song/:form_id", editSong)
+app.put("/api/edit/:form_id", editSong)
 app.delete("/api/delete_song/:form_id", deleteSong)
 
 //SERVER LISTENING
