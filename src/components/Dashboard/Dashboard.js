@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import axios from "axios"; 
 import View from "./View";
 import {connect} from "react-redux"; 
+import { Redirect, Link } from "react-router-dom"; 
+import { logout } from "../../redux/reducers/users"; 
+
 
 class Dashboard extends Component {
     constructor(props) {
@@ -38,8 +41,26 @@ class Dashboard extends Component {
         })
     }
 
+    handleLogout = () => {
+        this.props.logout().then(({data}) => {
+
+            this.setState({
+                redirect: true
+            })
+        }).catch(err => {
+            console.log("logout error:", err)
+        })
+    }
 
     render() {
+
+        const {user} = this.props.users
+
+        const {redirect} = this.state
+
+        if(redirect) {
+            return <Redirect to="/"/>
+        }
 
         const mappedSongs = this.state.songs.map(song => {
             return (
@@ -57,7 +78,17 @@ class Dashboard extends Component {
         return (
             <div>
                 <h3>up next...</h3> 
-                {mappedSongs}
+                {
+                    user 
+                    &&
+                    <div>
+                    {mappedSongs}
+                    <button onClick={() => this.handleLogout()}>sign out</button>
+                    </div>
+                }
+                <ul>
+                    <Link to="/form">Got liquid courage?</Link>
+                </ul>
             </div>
         )
     }
@@ -65,4 +96,4 @@ class Dashboard extends Component {
 
 const mapStateToProps = state => state
 
-export default connect(mapStateToProps, null)(Dashboard)
+export default connect(mapStateToProps, {logout})(Dashboard)

@@ -39,15 +39,11 @@ app.post("/auth/login", login);
 app.delete("/auth/logout", logout);
 // app.get("/auth/get_user", getUser);  
 
-//AUTH
-// app.get("/api/get_dj_songs", adminOnly, getSongs)
-// app.delete("/api/delete_dj_song/:id", adminOnly, deleteSong)
-
 //ENDPOINTS - FULL CRUD: GET, POST, PUT, DELETE
-app.get("/api/get_songs", getSongs) 
-app.post("/api/add_song", createSong)
-app.put("/api/edit/:form_id", editSong)
-app.delete("/api/delete_song/:form_id", deleteSong)
+app.get("/api/get_songs", getSongs) // returns all songs placed in queue (dashboard)
+app.post("/api/add_song", createSong) // add a song to be placed in queue
+app.put("/api/edit/:form_id", editSong) // edit the title of the song 
+app.delete("/api/delete_song/:form_id", deleteSong) // delete the song from queue 
 
 //SERVER LISTENING
 app.listen(SERVER_PORT, console.log(`Listening on the best port in town, port ${SERVER_PORT}`)); 

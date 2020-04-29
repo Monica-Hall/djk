@@ -38,6 +38,8 @@ class Register extends Component {
     }
 
     render() {
+        let {admin} = this.state
+
         return (
             <div>
                 <p>CREATE AN ACCOUNT</p> 
@@ -47,7 +49,7 @@ class Register extends Component {
                         <input
                             name="singer"
                             type="checkbox"
-                            checked={!this.state.admin}
+                            checked={!admin}
                             onChange={this.handleClick}
                         />
                         <label htmlFor="singer">Singer</label>
@@ -57,7 +59,7 @@ class Register extends Component {
                         <input
                             name="dj"
                             type="checkbox"
-                            checked={this.state.admin}
+                            checked={admin}
                             onChange={this.handleClick}
                         />
                         <label htmlFor="dj">DJ</label>
@@ -84,7 +86,7 @@ class Register extends Component {
                         onChange={this.handleChange}
                         placeholder="enter your password..."
                     />
-                    <button onClick={this.handleChange}>sign up</button>
+                    <button>sign up</button>
                 </form>
 
                 <p>Already have an account?</p>

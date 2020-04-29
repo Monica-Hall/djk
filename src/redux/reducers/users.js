@@ -6,7 +6,7 @@ const LOGOUT_USER = "LOGOUT_USER";
 // const GET_USER = "GET_USER"; 
 
 const initialState = {
-    user: {}, 
+    user: null, 
     loading: false
 }
 

@@ -1,5 +1,5 @@
 import React, { Component } from "react"; 
-import {Redirect} from "react-router-dom"; 
+import {Redirect, Link} from "react-router-dom"; 
 import {createSong} from "../../redux/reducers/songs"; 
 import { connect } from "react-redux";
 
@@ -81,6 +81,9 @@ class Form extends Component {
                     />
                     <button>submit</button>
                 </form>
+                <ul>
+                    <Link to="/dashboard">Who's up next?</Link>
+                </ul>
             </div>
         )
     }
