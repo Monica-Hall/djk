@@ -4,11 +4,13 @@ const express = require("express");
 const session = require("express-session"); 
 const massive = require("massive"); 
 
+
 //IMPORT VARIABLES 
 const {CONNECTION_STRING, SERVER_PORT, SESSION_SECRET} = process.env; 
 const {register, login, logout} = require("./controllers/authCtrl");
 const {createSong, editSong, deleteSong, getSongs} = require("./controllers/songCtrl"); 
-// const {adminOnly} = require ("./middleware/adminOnly"); 
+const {completePayment} = require("./controllers/tipCtrl"); 
+
 
 //TOP LEVEL 
 const app = express(); 
@@ -21,6 +23,7 @@ app.use(session({
         maxAge: 1000 * 60 * 60 * 24 * 14
     }
 }))
+
 
 //MASSIVE
 massive({
@@ -37,13 +40,22 @@ massive({
 app.post("/auth/register", register); 
 app.post("/auth/login", login); 
 app.delete("/auth/logout", logout);
-// app.get("/auth/get_user", getUser);  
+
 
 //ENDPOINTS - FULL CRUD: GET, POST, PUT, DELETE
-app.get("/api/get_songs", getSongs) // returns all songs placed in queue (dashboard)
-app.post("/api/add_song", createSong) // add a song to be placed in queue
-app.put("/api/edit/:form_id", editSong) // edit the title of the song 
-app.delete("/api/delete_song/:form_id", deleteSong) // delete the song from queue 
+    // returns all songs placed in queue (dashboard)
+app.get("/api/get_songs", getSongs) 
+    // add a song to be placed in queue
+app.post("/api/add_song", createSong) 
+    // edit the title of the song 
+app.put("/api/edit/:form_id", editSong) 
+    // delete the song from queue 
+app.delete("/api/delete_song/:form_id", deleteSong) 
+
+
+//ENDPOINT - PAYMENT, STRIPE
+app.post("/api/payment", completePayment)
+
 
 //SERVER LISTENING
 app.listen(SERVER_PORT, console.log(`Listening on the best port in town, port ${SERVER_PORT}`)); 

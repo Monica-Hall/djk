@@ -4,7 +4,7 @@ import View from "./View";
 import {connect} from "react-redux"; 
 import { Redirect, Link } from "react-router-dom"; 
 import { logout } from "../../redux/reducers/users"; 
-
+// import Tip from "../Tip/Tip"; 
 
 class Dashboard extends Component {
     constructor(props) {
@@ -88,6 +88,9 @@ class Dashboard extends Component {
                 }
                 <ul>
                     <Link to="/form">Got liquid courage?</Link>
+                </ul>
+                <ul>
+                    <Link to="/payment">Tip the DJ!</Link>
                 </ul>
             </div>
         )
