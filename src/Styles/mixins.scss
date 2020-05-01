@@ -1,0 +1,14 @@
+@mixin all-buttons {
+    height: 30px; 
+    width: 100px; 
+    color: $white; 
+    background-color: $black;
+    font-size: 16px; 
+    padding: 0 10px; 
+    border: none; 
+
+    &:hover {
+        border: 1px solid $green; 
+        box-shadow: 0 0 30px $green; 
+    }
+}

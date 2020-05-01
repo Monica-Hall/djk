@@ -1,13 +1,14 @@
 import React from "react"; 
-// import { connect } from "react-redux"; 
+import "./Header.css"; 
 
 const Header = () => {
             
 
         return (
-            <div>
-                <p>DJ K[areoke]</p> 
-            </div>
+            <header className="header-main">
+                <h1>dj k</h1> 
+                <h2>[ a r a o k e ]</h2>
+            </header>
         )
     
 }

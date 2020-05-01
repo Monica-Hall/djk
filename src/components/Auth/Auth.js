@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Login from "./Login"; 
 import Register from "./Register"; 
 import {Redirect} from "react-router-dom"; 
+import "./Auth.css"; 
 
 class Auth extends Component {
     constructor(props) {
@@ -37,8 +38,9 @@ class Auth extends Component {
         }
 
         return (
-            <div>
-                This is Auth Component 
+            <div className="auth-main">
+                <h1>dj k</h1> 
+                <h2>[ a r a o k e ]</h2>
                 {
                     display
                     ?

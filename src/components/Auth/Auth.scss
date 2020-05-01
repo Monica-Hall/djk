@@ -1,0 +1,105 @@
+@import "../../Styles/colors.scss", "../../Styles/mixins.scss"; 
+
+.auth-main {
+    height: calc(100vh - 100px); 
+    width: 100%; 
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Aldrich', sans-serif;
+
+    h1 {
+        font-size: 150px;
+        color: $white;
+        margin-bottom: 0px;
+        text-shadow:
+            1px  1px 15px $black,
+            1px -1px 15px $black,
+            -1px  1px 15px $black,
+            -1px -1px 15px $black;
+    }
+
+    h2 {
+        font-size: 100px;
+        color: $black;
+        margin-top: 0px;
+        text-shadow: 0 0 10px $green; 
+        filter: drop-shadow(20px 10px 6px $grey);
+    }
+}
+
+.login-container {   
+    flex-direction: column;
+    height: 100%; 
+    width: 100%;
+    margin-bottom: 100px; 
+
+    button {
+        @include all-buttons; 
+    }
+
+    form {
+        color: $grey; 
+        margin-bottom: 50px; 
+    }
+
+    input {
+        height: 20px; 
+        width: 200px; 
+        align-items: center;
+        margin: 20px;
+        
+    }
+
+    p {
+        color: $grey;
+        font-size: 16px; 
+    }
+}
+
+.register-container {
+    flex-direction: column;
+    height: 100%; 
+    width: 100%; 
+    margin-bottom: 100px; 
+
+    button {
+        @include all-buttons; 
+    }
+
+    h3 {
+        color: $grey;
+        margin-top: 0;
+    }
+
+    form {
+        color: $grey; 
+        margin-bottom: 10px; 
+    }
+
+    span {
+        display: block; 
+        margin: 10px; 
+        
+        label {
+            font-size: 16px;
+            color: $grey;
+        }
+
+    }
+    
+    input[type="text"] {
+        height: 20px; 
+        width: 200px; 
+        align-items: center;
+        margin: 10px;
+        
+    }
+
+    p {
+        color: $grey;
+        font-size: 16px;  
+    }
+}
+

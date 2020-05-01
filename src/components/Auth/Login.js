@@ -30,8 +30,9 @@ class Login extends Component {
 
     render() {
         return (
-            <div>
-                <form onSubmit={this.handleLogin}>
+            <div className="login-container">
+                <form onSubmit={this.handleLogin} className="auth-form">
+                    <label htmlFor="email">email: </label>
                     <input
                         name="email"
                         type="text"
@@ -40,6 +41,8 @@ class Login extends Component {
                         placeholder="enter your email..."
                     />
 
+
+                    <label htmlFor="password">password: </label>
                     <input
                         name="password"
                         type="text"
@@ -52,7 +55,7 @@ class Login extends Component {
                 </form> 
 
                 <p>Don't have an account?</p>
-                <button onClick={this.props.toggle}>Sign up!</button>
+                <button onClick={this.props.toggle}>sign up</button>
             </div>
         )
     }

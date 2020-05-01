@@ -1,0 +1,139 @@
+.auth-main {
+  height: calc(100vh - 100px);
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: 'Aldrich', sans-serif;
+}
+
+.auth-main h1 {
+  font-size: 150px;
+  color: white;
+  margin-bottom: 0px;
+  text-shadow: 1px 1px 15px black, 1px -1px 15px black, -1px 1px 15px black, -1px -1px 15px black;
+}
+
+.auth-main h2 {
+  font-size: 100px;
+  color: black;
+  margin-top: 0px;
+  text-shadow: 0 0 10px #1DEE19;
+  -webkit-filter: drop-shadow(20px 10px 6px rgba(0, 0, 0, 0.6));
+          filter: drop-shadow(20px 10px 6px rgba(0, 0, 0, 0.6));
+}
+
+.login-container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.login-container button {
+  height: 30px;
+  width: 100px;
+  color: white;
+  background-color: black;
+  font-size: 16px;
+  padding: 0 10px;
+  border: none;
+}
+
+.login-container button:hover {
+  border: 1px solid #1DEE19;
+  -webkit-box-shadow: 0 0 30px #1DEE19;
+          box-shadow: 0 0 30px #1DEE19;
+}
+
+.login-container form {
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 50px;
+}
+
+.login-container input {
+  height: 20px;
+  width: 200px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px;
+}
+
+.login-container p {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 16px;
+}
+
+.register-container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.register-container button {
+  height: 30px;
+  width: 100px;
+  color: white;
+  background-color: black;
+  font-size: 16px;
+  padding: 0 10px;
+  border: none;
+}
+
+.register-container button:hover {
+  border: 1px solid #1DEE19;
+  -webkit-box-shadow: 0 0 30px #1DEE19;
+          box-shadow: 0 0 30px #1DEE19;
+}
+
+.register-container h3 {
+  color: rgba(0, 0, 0, 0.6);
+  margin-top: 0;
+}
+
+.register-container form {
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 10px;
+}
+
+.register-container span {
+  display: block;
+  margin: 10px;
+}
+
+.register-container span label {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.register-container input[type="text"] {
+  height: 20px;
+  width: 200px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px;
+}
+
+.register-container p {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 16px;
+}
+/*# sourceMappingURL=Auth.css.map */

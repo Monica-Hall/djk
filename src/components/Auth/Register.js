@@ -41,10 +41,10 @@ class Register extends Component {
         let {admin} = this.state
 
         return (
-            <div>
-                <p>CREATE AN ACCOUNT</p> 
+            <div className="register-container">
+                <h3>CREATE AN ACCOUNT</h3> 
                 <p>First off, who dis?</p>
-                <form onSubmit={this.handleRegister}>
+                <form onSubmit={this.handleRegister} className="register-form">
                     <span> 
                         <input
                             name="singer"
@@ -52,19 +52,21 @@ class Register extends Component {
                             checked={!admin}
                             onChange={this.handleClick}
                         />
-                        <label htmlFor="singer">Singer</label>
+                        <label htmlFor="singer">singer</label>
                     </span>
                     
-                    <span> 
+                    <span className="checkbox"> 
                         <input
                             name="dj"
                             type="checkbox"
                             checked={admin}
                             onChange={this.handleClick}
                         />
-                        <label htmlFor="dj">DJ</label>
+                        <label htmlFor="dj">dj</label>
                     </span>
                     
+                    <label htmlFor="name">name: </label>
+
                     <input
                         name="name"
                         type="text"
@@ -72,6 +74,8 @@ class Register extends Component {
                         onChange={this.handleChange}
                         placeholder="enter your name..."
                     />
+
+                    <label htmlFor="email">email: </label>
                     <input
                         name="email"
                         type="text"
@@ -79,6 +83,8 @@ class Register extends Component {
                         onChange={this.handleChange}
                         placeholder="enter your email..."
                     />
+                    
+                    <label htmlFor="password">password: </label>
                     <input
                         name="password"
                         type="text"
@@ -90,7 +96,7 @@ class Register extends Component {
                 </form>
 
                 <p>Already have an account?</p>
-                <button onClick={this.props.toggle}>Sign in!</button>
+                <button onClick={this.props.toggle}>sign in</button>
             </div>
         )
     }
