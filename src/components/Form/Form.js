@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import {Redirect, Link} from "react-router-dom"; 
 import {createSong} from "../../redux/reducers/songs"; 
 import { connect } from "react-redux";
+import "./Form.css"
 
 class Form extends Component {
     constructor(props) {
@@ -52,37 +53,52 @@ class Form extends Component {
         }
 
         return (
-            <div>
+            <div className="form-main">
                     {/* want a uniquie greeting, try this.props.users.user.name */}
-                <p>Tell that funky DJ to put that record on.</p>
-                <form onSubmit={this.handleClick}>
-                    <input
-                        name="artist"
-                        type="text"
-                        value={this.state.artist}
-                        onChange={(e) => this.handleChange(e.target.name, e.target.value)}
-                        placeholder="enter artist name..."
-                    />
+                <p className="top-header">TELL THAT FUNKY DJ</p>
+                <p className="bottom-header">TO PUT THAT RECORD ON</p>
 
-                    <input
-                        name="title"
-                        type="text"
-                        value={this.state.title}
-                        onChange={(e) => this.handleChange(e.target.name, e.target.value)}
-                        placeholder="enter song title..."
-                    />
+                <form onSubmit={this.handleClick} className="song-form">
 
-                    <input
+                    <div>
+                    <h4>ADD A SONG</h4>
+                        <label htmlFor="artist name">artist name:</label>
+                        <input className="artist-input"
+                            name="artist"
+                            type="text"
+                            value={this.state.artist}
+                            onChange={(e) => this.handleChange(e.target.name, e.target.value)}
+                            placeholder="enter artist name..."
+                        />
+                    </div>
+
+                    <div>
+                        <label htmlFor="song title">song title:</label>
+                        <input className="song-input"
+                            name="title"
+                            type="text"
+                            value={this.state.title}
+                            onChange={(e) => this.handleChange(e.target.name, e.target.value)}
+                            placeholder="enter song title..."
+                        />
+                    </div>
+
+                    <div>
+                    <label htmlFor="requests">special requests:</label>
+                    <input className="special-input"
                         name="requests"
                         type="text"
                         value={this.state.requests}
                         onChange={(e) => this.handleChange(e.target.name, e.target.value)}
-                        placeholder="Enter special request. Example: Play the remix version by so and so..."
+                        placeholder="Enter special request... 'Play the remix version by so and so...'"
                     />
-                    <button>submit</button>
+                    </div>
+                    
+                        <button>submit</button>
                 </form>
+
                 <ul>
-                    <Link to="/dashboard">Who's up next?</Link>
+                    <Link to="/dashboard">Who's up next</Link>
                 </ul>
             </div>
         )

@@ -21,15 +21,19 @@
   color: white;
   margin-bottom: 0px;
   text-shadow: 1px 1px 15px black, 1px -1px 15px black, -1px 1px 15px black, -1px -1px 15px black;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: black;
 }
 
 .auth-main h2 {
   font-size: 100px;
   color: black;
   margin-top: 0px;
-  text-shadow: 0 0 10px #1DEE19;
+  text-shadow: 0 0 20px #1DEE19;
   -webkit-filter: drop-shadow(20px 10px 6px rgba(0, 0, 0, 0.6));
           filter: drop-shadow(20px 10px 6px rgba(0, 0, 0, 0.6));
+  -webkit-text-stroke-width: .9px;
+  -webkit-text-stroke-color: #1DEE19;
 }
 
 .login-container {
@@ -129,7 +133,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 10px;
+  margin: 20px;
 }
 
 .register-container p {

@@ -1,13 +1,7 @@
 @import "../../Styles/colors.scss", "../../Styles/mixins.scss"; 
 
 .auth-main {
-    height: calc(100vh - 100px); 
-    width: 100%; 
-    display: flex; 
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-    font-family: 'Aldrich', sans-serif;
+    @include main-page; 
 
     h1 {
         font-size: 150px;
@@ -18,14 +12,18 @@
             1px -1px 15px $black,
             -1px  1px 15px $black,
             -1px -1px 15px $black;
+        -webkit-text-stroke-width: 3px;
+        -webkit-text-stroke-color: $black;
     }
 
     h2 {
         font-size: 100px;
         color: $black;
         margin-top: 0px;
-        text-shadow: 0 0 10px $green; 
+        text-shadow: 0 0 20px $green; 
         filter: drop-shadow(20px 10px 6px $grey);
+        -webkit-text-stroke-width: .9px;
+        -webkit-text-stroke-color: $green;
     }
 }
 
@@ -45,11 +43,7 @@
     }
 
     input {
-        height: 20px; 
-        width: 200px; 
-        align-items: center;
-        margin: 20px;
-        
+        @include all-inputs
     }
 
     p {
@@ -90,11 +84,7 @@
     }
     
     input[type="text"] {
-        height: 20px; 
-        width: 200px; 
-        align-items: center;
-        margin: 10px;
-        
+        @include all-inputs;        
     }
 
     p {

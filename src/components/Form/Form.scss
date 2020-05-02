@@ -1,0 +1,84 @@
+@import "../../Styles/colors.scss", "../../Styles/mixins.scss"; 
+
+.form-main {
+    @include main-page; 
+
+    .top-header {
+        -webkit-text-fill-color: $white;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: $black;
+        font-size: 50px;
+        color: $white;
+        margin-bottom: 0px;
+        letter-spacing: 1px;;
+        text-shadow:
+            1px  1px 7px $black,
+            1px -1px 7px $black,
+            -1px  1px 7px $black,
+            -1px -1px 7px $black;
+    }
+
+    .bottom-header {
+        letter-spacing: 1px;
+        font-size: 50px;
+        color: $black;
+        margin-top: 0px;
+        text-shadow: 0 0 30px $green; 
+        filter: drop-shadow(20px 10px 6px $grey);
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: $green;
+    }
+
+    .song-form {
+        border: 5px solid $black; 
+        margin: 10px;
+        padding: 20px; 
+        color: $grey;
+        text-align-last: left;
+
+        h4 {
+            margin-top: 10px;
+            font-size: 20px;
+            color: $grey;
+            text-align-last: center;
+        }
+
+
+        .artist-input {
+            height: 30px; 
+            @include add-input;
+            margin-left: 35px;
+        }
+
+        .song-input {
+            height: 30px; 
+            @include add-input;
+            margin-left: 50px;
+        }
+
+        .special-input {
+            height: 100px; 
+            @include add-input;
+        }
+
+        button {
+            @include all-buttons;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: 230px;
+            text-align-last: center;
+        }
+
+        // THIS IS WHERE YOU LEFT OFF ---------------------------
+
+        // ul {
+        //     text-decoration: none;
+        //     box-sizing: border-box;
+        //     background: $grey;
+
+        // }
+
+       
+
+    }
+}

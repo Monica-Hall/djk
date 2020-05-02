@@ -12,3 +12,28 @@
         box-shadow: 0 0 30px $green; 
     }
 }
+
+@mixin main-page {
+    height: calc(100vh - 100px); 
+    width: 100%; 
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Aldrich', sans-serif;
+}
+
+@mixin all-inputs {
+    height: 20px; 
+    width: 200px; 
+    align-items: center;
+    margin: 20px;
+}
+
+@mixin add-input {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 400px; 
+    padding: 5px;
+    border: 2px solid $black;
+}
