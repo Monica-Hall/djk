@@ -1,0 +1,20 @@
+@import "../../Styles/mixins.scss", "../../Styles/colors.scss";
+
+.dash-main {
+    @include main-page;
+}
+
+.dash-header {
+    
+    font-size: 70px;
+        color: $white;
+        margin-bottom: 0;
+        margin-top: 0;
+        text-shadow:
+            1px  1px 15px $black,
+            1px -1px 15px $black,
+            -1px  1px 15px $black,
+            -1px -1px 15px $black;
+        -webkit-text-stroke-width: 3px;
+        -webkit-text-stroke-color: $black;
+}

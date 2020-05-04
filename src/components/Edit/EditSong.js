@@ -35,7 +35,6 @@ class EditSong extends Component {
 
 
     render() {
-        // console.log(this.songs)
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>

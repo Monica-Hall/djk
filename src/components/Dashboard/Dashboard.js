@@ -4,7 +4,7 @@ import View from "./View";
 import {connect} from "react-redux"; 
 import { Redirect, Link } from "react-router-dom"; 
 import { logout } from "../../redux/reducers/users"; 
-// import Tip from "../Tip/Tip"; 
+import "./Dashboard.css" 
 
 class Dashboard extends Component {
     constructor(props) {
@@ -67,7 +67,7 @@ class Dashboard extends Component {
                 <div key={song.form_id}>
                     <View 
                     song={song}
-                    user={this.props.users.user}
+                    user={user}
                     deleteSong={this.deleteSong}
                     getSongs={this.getSongs}
                     />
@@ -75,23 +75,34 @@ class Dashboard extends Component {
             )
         })
 
+
         return (
-            <div>
-                <h3>up next...</h3> 
-                {
-                    user 
-                    &&
-                    <div>
-                    {mappedSongs}
-                    <button onClick={() => this.handleLogout()}>sign out</button>
-                    </div>
-                }
-                <ul>
-                    <Link to="/form">Got liquid courage?</Link>
-                </ul>
-                <ul>
-                    <Link to="/payment">Tip the DJ!</Link>
-                </ul>
+            <div className="dash-main">
+                <div>
+                    <h3 className="dash-header">up next...</h3> 
+                </div>
+                
+                <div>
+                    {
+                        user 
+                        &&
+                        <div>
+                            {mappedSongs}
+                            <button onClick={() => this.handleLogout()}>sign out</button>
+                        </div>
+                    }
+                </div>
+                
+                <div>
+                    <ul>
+                        <Link to="/form">Got liquid courage? Add a song</Link>
+                    </ul>
+
+                    <ul>
+                        <Link to="/payment">Tip the DJ</Link>
+                    </ul>
+                </div>
+                
             </div>
         )
     }

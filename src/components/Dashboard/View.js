@@ -1,5 +1,7 @@
 import React, {Component} from "react";
-import EditSong from "../Edit/EditSong";  
+import EditSong from "../Edit/EditSong"; 
+import "./View.css"
+
 
 export default class View extends Component {
     constructor(props) {
@@ -24,23 +26,46 @@ export default class View extends Component {
         const {is_admin, user_id: singer} = user 
 
         return (
-            <div>
+            <div className="song-list">
+                <div className="queue">
                 {
                     is_admin
                     ?
                     <div>
-                        {name}
-                        {artist}
-                        {title}
-                        {requests}
-                        {complete ? "yes": "no"}
+                        <div>
+                            {name}
+                        </div>
+
+                        <div>
+                            {artist}
+                        </div>
+
+                        <div>
+                            {title}
+                        </div>
+
+                        <div>
+                            {requests}
+                        </div>
+
+                        <div>
+                            {complete ? "yes": "no"}
+                        </div>
                         <button onClick={() => deleteSong(form_id)}>delete</button>
                     </div>
                     :
                     <div>
-                        {name}
-                        {artist}
-                        {title}
+                        <div>
+                            {name}
+                        </div>
+
+                        <div>
+                            {artist}
+                        </div>
+
+                        <div>
+                            {title}
+                        </div>
                         
                         {
                             +singer === +user_id &&
@@ -61,6 +86,8 @@ export default class View extends Component {
                         }                            
                     </div>
                 }
+                </div>
+                
             </div>
         )
     }

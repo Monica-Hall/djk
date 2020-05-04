@@ -1,0 +1,28 @@
+.dash-main {
+  height: calc(100vh - 100px);
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: 'Aldrich', sans-serif;
+}
+
+.dash-header {
+  font-size: 70px;
+  color: white;
+  margin-bottom: 0;
+  margin-top: 0;
+  text-shadow: 1px 1px 15px black, 1px -1px 15px black, -1px 1px 15px black, -1px -1px 15px black;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: black;
+}
+/*# sourceMappingURL=Dashboard.css.map */

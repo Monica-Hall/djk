@@ -31,14 +31,14 @@ class Register extends Component {
     }
 
     handleClick = () => {
-        let {admin} = this.state
+        let {is_admin} = this.state
         this.setState({
-            admin: !admin
+            is_admin: !is_admin
         })
     }
 
     render() {
-        let {admin} = this.state
+        let {is_admin} = this.state
 
         return (
             <div className="register-container">
@@ -49,7 +49,8 @@ class Register extends Component {
                         <input
                             name="singer"
                             type="checkbox"
-                            checked={!admin}
+                            value={!is_admin}
+                            checked={!is_admin}
                             onChange={this.handleClick}
                         />
                         <label htmlFor="singer">singer</label>
@@ -59,7 +60,8 @@ class Register extends Component {
                         <input
                             name="dj"
                             type="checkbox"
-                            checked={admin}
+                            value={is_admin}
+                            checked={is_admin}
                             onChange={this.handleClick}
                         />
                         <label htmlFor="dj">dj</label>
