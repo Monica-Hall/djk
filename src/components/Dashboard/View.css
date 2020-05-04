@@ -6,8 +6,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  background-color: #1DEE19;
-  width: 100vw;
+  width: 80vw;
 }
 
 .test {
@@ -18,7 +17,11 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  background-color: red;
+  background-color: #1DEE19;
   width: 100vw;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  font-size: 16px;
 }
 /*# sourceMappingURL=View.css.map */

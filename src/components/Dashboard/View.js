@@ -31,8 +31,8 @@ export default class View extends Component {
                 {
                     is_admin
                     ?
-                    <div>
-                        <div className="test">
+                    <div className="test">
+                        <div>
                             {name}
                         </div>
 
@@ -54,7 +54,7 @@ export default class View extends Component {
                         <button onClick={() => deleteSong(form_id)}>delete</button>
                     </div>
                     :
-                    <div>
+                    <div className="test">
                         <div>
                             {name}
                         </div>
