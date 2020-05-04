@@ -32,7 +32,7 @@ export default class View extends Component {
                     is_admin
                     ?
                     <div>
-                        <div>
+                        <div className="test">
                             {name}
                         </div>
 

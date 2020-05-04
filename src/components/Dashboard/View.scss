@@ -2,10 +2,16 @@
 
 
 .queue {
+    display: flex; 
     flex-direction: row;
+    background-color: $green;
+    width: 100vw; 
 }
 
-div {
+.test {
+    display: flex; 
     flex-direction: row;
+    background-color: red;
+    width: 100vw; 
 
 }
