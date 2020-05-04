@@ -3,6 +3,8 @@ require("dotenv").config();
 const express = require("express"); 
 const session = require("express-session"); 
 const massive = require("massive"); 
+const path = require('path'); 
+
 
 
 //IMPORT VARIABLES 
@@ -15,6 +17,7 @@ const {completePayment} = require("./controllers/tipCtrl");
 //TOP LEVEL 
 const app = express(); 
 app.use(express.json()); 
+app.use( express.static( `${__dirname}/../build` )); 
 app.use(session({
     secret: SESSION_SECRET, 
     resave: false, 
@@ -51,6 +54,11 @@ app.post("/api/add_song", createSong)
 app.put("/api/edit/:form_id", editSong) 
     // delete the song from queue 
 app.delete("/api/delete_song/:form_id", deleteSong) 
+
+//ssh 
+app.get('*', (req, res)=>{
+    res.sendFile(path.join(__dirname, '../build/index.html'));
+});
 
 
 //ENDPOINT - PAYMENT, STRIPE
