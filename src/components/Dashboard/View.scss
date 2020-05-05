@@ -30,3 +30,29 @@
 .column {
     width: 30%; 
 }
+
+
+@media screen and (max-width: 735px) {
+
+    .queue {
+        width: 100%; 
+    
+    }
+    
+    .row {
+        font-size: 14px; 
+        color: $white;
+        border: 1px solid $green;
+        margin: 6px; 
+    
+        &:click {
+            box-shadow: 0 0 30px $green; 
+        }
+      
+    }
+    
+    .column {
+        width: 50%; 
+    }
+
+}

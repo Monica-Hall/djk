@@ -16,3 +16,38 @@
         box-shadow: 0 0 30px $green; 
     }
 }
+
+
+@media screen and (max-width: 735px) {
+
+    .edit-option {
+        margin: 5px; 
+        height: 20px; 
+        width: 50%; 
+        font-size: 12px; 
+        border: none; 
+        display: flex;
+    
+        &:click {
+            border: 1px solid $green; 
+            box-shadow: 0 0 30px $green; 
+        }
+    }
+
+    // edit song input - save - cancel buttons 
+    .edit-form {
+        position: absolute;
+        right: 5px;
+        bottom: 165px;
+        width: 25%;
+
+    }
+
+    .edit-song {
+        width: 95%;
+        background-color: $black;
+        color: $white;
+
+    }
+
+}

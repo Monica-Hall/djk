@@ -83,4 +83,18 @@
   -webkit-box-shadow: 0 0 30px #1DEE19;
           box-shadow: 0 0 30px #1DEE19;
 }
+
+@media screen and (max-width: 735px) {
+  .dash-header {
+    font-size: 50px;
+    margin-top: 20px;
+  }
+  .queue-header {
+    font-size: 18px;
+    margin-right: 100px;
+  }
+  p {
+    margin: 0 auto;
+  }
+}
 /*# sourceMappingURL=Dashboard.css.map */

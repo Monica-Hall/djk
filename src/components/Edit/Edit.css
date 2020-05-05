@@ -17,4 +17,33 @@
   -webkit-box-shadow: 0 0 30px #1DEE19;
           box-shadow: 0 0 30px #1DEE19;
 }
+
+@media screen and (max-width: 735px) {
+  .edit-option {
+    margin: 5px;
+    height: 20px;
+    width: 50%;
+    font-size: 12px;
+    border: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .edit-option:click {
+    border: 1px solid #1DEE19;
+    -webkit-box-shadow: 0 0 30px #1DEE19;
+            box-shadow: 0 0 30px #1DEE19;
+  }
+  .edit-form {
+    position: absolute;
+    right: 5px;
+    bottom: 165px;
+    width: 25%;
+  }
+  .edit-song {
+    width: 95%;
+    background-color: black;
+    color: white;
+  }
+}
 /*# sourceMappingURL=Edit.css.map */

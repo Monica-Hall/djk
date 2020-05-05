@@ -37,9 +37,9 @@ class EditSong extends Component {
 
     render() {
         return (
-            <div>
+            <div className="edit-form">
                 <form onSubmit={this.handleSubmit}>
-                    <input
+                    <input className="edit-song"
                             name="title"
                             type="text"
                             value={this.state.title}

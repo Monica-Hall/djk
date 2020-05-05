@@ -93,3 +93,94 @@
     }
 }
 
+
+//RESPONSIVE  
+@media screen and (max-width: 735px) {
+    .auth-main {
+        h1 {
+            font-size: 75px; 
+            width: 100%;  
+        }
+
+        h2 {
+            font-size: 50px;
+        }
+
+    }
+
+    // login 
+    .login-container {  
+        height: 70%; 
+        width: 90%;
+        margin-bottom: 50px; 
+        margin-top: 30px;
+    
+        form {
+            color: $black; 
+            margin: 40px; 
+        }
+    
+        input {
+            height: 50%; 
+            width: 100%; 
+            align-items: center;
+            margin: 20px auto;
+            font-size: 14px;
+        }
+    
+        p {
+            color: $black;
+        }
+    }
+
+    //register
+    .register-container {
+        height: 70%; 
+        width: 90%; 
+        margin-bottom: 50px; 
+    
+        button {
+            @include responsive-buttons; 
+        }
+    
+        h3 {
+            color: $black;
+            margin-top: 5px;
+        }
+    
+        form {
+            color: $black; 
+            margin-bottom: 10px; 
+        }
+    
+        span {
+            display: block; 
+            margin: 5px auto; 
+            
+            label {
+                font-size: 16px;
+                color: $grey;
+            }
+    
+        }
+        
+        input[type="text"] {
+            height: 50%; 
+            width: 90%; 
+            align-items: center;
+            margin: 10px auto;
+            font-size: 14px;        }
+
+        p {
+            color: $black; 
+            margin-top: 20px; 
+        }
+    
+    }    
+
+}
+
+
+
+
+

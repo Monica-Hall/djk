@@ -140,4 +140,84 @@
   color: rgba(0, 0, 0, 0.6);
   font-size: 16px;
 }
+
+@media screen and (max-width: 735px) {
+  .auth-main h1 {
+    font-size: 75px;
+    width: 100%;
+  }
+  .auth-main h2 {
+    font-size: 50px;
+  }
+  .login-container {
+    height: 70%;
+    width: 90%;
+    margin-bottom: 50px;
+    margin-top: 30px;
+  }
+  .login-container form {
+    color: black;
+    margin: 40px;
+  }
+  .login-container input {
+    height: 50%;
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 20px auto;
+    font-size: 14px;
+  }
+  .login-container p {
+    color: black;
+  }
+  .register-container {
+    height: 70%;
+    width: 90%;
+    margin-bottom: 50px;
+  }
+  .register-container button {
+    height: 30px;
+    width: 100px;
+    color: white;
+    background-color: black;
+    font-size: 16px;
+    padding: 0 10px;
+    border: none;
+  }
+  .register-container button:click {
+    border: 1px solid #1DEE19;
+    -webkit-box-shadow: 0 0 30px #1DEE19;
+            box-shadow: 0 0 30px #1DEE19;
+  }
+  .register-container h3 {
+    color: black;
+    margin-top: 5px;
+  }
+  .register-container form {
+    color: black;
+    margin-bottom: 10px;
+  }
+  .register-container span {
+    display: block;
+    margin: 5px auto;
+  }
+  .register-container span label {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .register-container input[type="text"] {
+    height: 50%;
+    width: 90%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 10px auto;
+    font-size: 14px;
+  }
+  .register-container p {
+    color: black;
+    margin-top: 20px;
+  }
+}
 /*# sourceMappingURL=Auth.css.map */

@@ -38,4 +38,23 @@
 .column {
   width: 30%;
 }
+
+@media screen and (max-width: 735px) {
+  .queue {
+    width: 100%;
+  }
+  .row {
+    font-size: 14px;
+    color: white;
+    border: 1px solid #1DEE19;
+    margin: 6px;
+  }
+  .row:click {
+    -webkit-box-shadow: 0 0 30px #1DEE19;
+            box-shadow: 0 0 30px #1DEE19;
+  }
+  .column {
+    width: 50%;
+  }
+}
 /*# sourceMappingURL=View.css.map */

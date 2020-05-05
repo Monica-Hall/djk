@@ -1,8 +1,9 @@
 @import "../../Styles/colors.scss", "../../Styles/mixins.scss"; 
 
+
 .form-main {
     @include main-page; 
-
+    
     .top-header {
         -webkit-text-fill-color: $white;
         -webkit-text-stroke-width: 2px;
@@ -33,16 +34,21 @@
         border: 5px solid $black; 
         margin: 10px;
         padding: 20px; 
-        color: $grey;
+        color: $black;
+        
         text-align-last: left;
+        box-shadow: 0 0 20px $grey;
+        
 
-        h4 {
+        div h4 {
             margin-top: 10px;
             font-size: 20px;
             color: $grey;
             text-align-last: center;
+            filter: drop-shadow(20px 10px 6px $grey);
+            -webkit-text-stroke-width: .1px;
+            -webkit-text-stroke-color: $grey;
         }
-
 
         .artist-input {
             height: 30px; 
@@ -69,16 +75,67 @@
             text-align-last: center;
         }
 
-        // THIS IS WHERE YOU LEFT OFF ---------------------------
+    }
+}
 
-        // ul {
-        //     text-decoration: none;
-        //     box-sizing: border-box;
-        //     background: $grey;
 
-        // }
+//RESPONSIVE 
+@media screen and (max-width: 735px) {
 
-       
+    .form-main {
+
+        .top-header {
+            font-size: 30px;
+            margin-top: 10px;
+        }
+    
+        .bottom-header {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .song-form {
+            width: 80%;
+            border: 3px solid $black; 
+            padding: 10px; 
+            color: $grey;
+           
+    
+            h4 {
+                margin-top: 10px;
+                font-size: 15px;
+                color: $black;
+                text-align-last: center;
+            }
+    
+            .artist-input {
+                @include responsive-form-input;
+            }
+    
+            .song-input {
+                @include responsive-form-input;
+                height: 30px; 
+                margin-left: 35px;
+            }
+    
+            .special-input {
+                @include responsive-form-input;
+                height: 60px; 
+                margin-left: 35px;
+
+            }
+    
+            button {
+                @include responsive-buttons;
+                margin-left: 130px;
+
+            }
+    
+        }
+
 
     }
+   
+
+    
 }

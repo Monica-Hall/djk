@@ -43,15 +43,21 @@
   border: 5px solid black;
   margin: 10px;
   padding: 20px;
-  color: rgba(0, 0, 0, 0.6);
+  color: black;
   text-align-last: left;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
 }
 
-.form-main .song-form h4 {
+.form-main .song-form div h4 {
   margin-top: 10px;
   font-size: 20px;
   color: rgba(0, 0, 0, 0.6);
   text-align-last: center;
+  -webkit-filter: drop-shadow(20px 10px 6px rgba(0, 0, 0, 0.6));
+          filter: drop-shadow(20px 10px 6px rgba(0, 0, 0, 0.6));
+  -webkit-text-stroke-width: .1px;
+  -webkit-text-stroke-color: rgba(0, 0, 0, 0.6);
 }
 
 .form-main .song-form .artist-input {
@@ -101,5 +107,68 @@
   border: 1px solid #1DEE19;
   -webkit-box-shadow: 0 0 30px #1DEE19;
           box-shadow: 0 0 30px #1DEE19;
+}
+
+@media screen and (max-width: 735px) {
+  .form-main .top-header {
+    font-size: 30px;
+    margin-top: 10px;
+  }
+  .form-main .bottom-header {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  .form-main .song-form {
+    width: 80%;
+    border: 3px solid black;
+    padding: 10px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .form-main .song-form h4 {
+    margin-top: 10px;
+    font-size: 15px;
+    color: black;
+    text-align-last: center;
+  }
+  .form-main .song-form .artist-input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 75%;
+    padding: 1px;
+    border: 2px solid black;
+  }
+  .form-main .song-form .song-input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 75%;
+    padding: 1px;
+    border: 2px solid black;
+    height: 30px;
+    margin-left: 35px;
+  }
+  .form-main .song-form .special-input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 75%;
+    padding: 1px;
+    border: 2px solid black;
+    height: 60px;
+    margin-left: 35px;
+  }
+  .form-main .song-form button {
+    height: 30px;
+    width: 100px;
+    color: white;
+    background-color: black;
+    font-size: 16px;
+    padding: 0 10px;
+    border: none;
+    margin-left: 130px;
+  }
+  .form-main .song-form button:click {
+    border: 1px solid #1DEE19;
+    -webkit-box-shadow: 0 0 30px #1DEE19;
+            box-shadow: 0 0 30px #1DEE19;
+  }
 }
 /*# sourceMappingURL=Form.css.map */
