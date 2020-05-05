@@ -1,0 +1,20 @@
+.edit-option {
+  margin: 5px;
+  height: 20px;
+  width: 80px;
+  color: white;
+  background-color: black;
+  font-size: 12px;
+  padding: 0 10px;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.edit-option:hover {
+  border: 1px solid #1DEE19;
+  -webkit-box-shadow: 0 0 30px #1DEE19;
+          box-shadow: 0 0 30px #1DEE19;
+}
+/*# sourceMappingURL=Edit.css.map */

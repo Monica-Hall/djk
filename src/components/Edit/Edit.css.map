@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,YAAY,CAAC;EACT,MAAM,EAAE,GAAG;EACX,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI;EACX,KAAK,EEJD,KAAK;EFKT,gBAAgB,EEPZ,KAAK;EFQT,SAAS,EAAE,IAAI;EACf,OAAO,EAAE,MAAM;EACf,MAAM,EAAE,IAAI;EACZ,OAAO,EAAE,IAAI;CAMhB;;AAfD,AAWI,YAXQ,AAWP,MAAM,CAAC;EACJ,MAAM,EAAE,GAAG,CAAC,KAAK,CEbjB,OAAO;EFcP,UAAU,EAAE,CAAC,CAAC,CAAC,CAAC,IAAI,CEdpB,OAAO;CFeV",
+    "sources": [
+        "Edit.scss",
+        "../../Styles/mixins.scss",
+        "../../Styles/colors.scss"
+    ],
+    "names": [],
+    "file": "Edit.css"
+}

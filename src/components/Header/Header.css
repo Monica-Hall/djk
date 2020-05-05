@@ -17,6 +17,11 @@
           align-items: flex-start;
 }
 
+.header-main:hover {
+  -webkit-box-shadow: 0 0 100px #1DEE19;
+          box-shadow: 0 0 100px #1DEE19;
+}
+
 .header-main h1 {
   font-family: 'Aldrich', sans-serif;
   font-size: 34px;

@@ -81,6 +81,12 @@ class Dashboard extends Component {
                 <div>
                     <h3 className="dash-header">up next...</h3> 
                 </div>
+
+                <div className="queue-header">
+                    <p>FEATURING</p>
+                    <p>ARTIST</p>
+                    <p>SONG</p>
+                </div>
                 
                 <div>
                     {
@@ -88,7 +94,7 @@ class Dashboard extends Component {
                         &&
                         <div>
                             {mappedSongs}
-                            <button onClick={() => this.handleLogout()}>sign out</button>
+                            <button className="sign-out" onClick={() => this.handleLogout()}>sign out</button>
                         </div>
                     }
                 </div>

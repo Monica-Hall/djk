@@ -8,6 +8,12 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
+    
+    &:hover {
+        box-shadow: 0 0 100px $green; 
+    }
+
+
 
     h1 {
         font-family: 'Aldrich', sans-serif;

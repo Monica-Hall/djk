@@ -4,12 +4,13 @@
     @include main-page;
 }
 
+// up next 
 .dash-header {
-    
+
     font-size: 70px;
         color: $white;
         margin-bottom: 0;
-        margin-top: 0;
+        margin-top: 80px;
         text-shadow:
             1px  1px 15px $black,
             1px -1px 15px $black,
@@ -17,4 +18,45 @@
             -1px -1px 15px $black;
         -webkit-text-stroke-width: 3px;
         -webkit-text-stroke-color: $black;
+}
+
+// feature, artist, song title 
+.queue-header {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-around;
+    width: 70vw; 
+
+    font-size: 30px;
+    color: $black;
+    margin-top: 0px;
+    text-shadow: 0 0 20px $green; 
+    filter: drop-shadow(20px 10px 6px $grey);
+    -webkit-text-stroke-width: .9px;
+    -webkit-text-stroke-color: $green;
+
+}
+
+// edit and delete buttons 
+.option-button {
+    margin: 5px; 
+    height: 20px; 
+    width: 80px; 
+    color: $white; 
+    background-color: $black;
+    font-size: 12px; 
+    padding: 0 10px; 
+    border: none; 
+    display: flex;
+
+    &:hover {
+        border: 1px solid $green; 
+        box-shadow: 0 0 30px $green; 
+    }
+}
+
+// sign out button 
+.sign-out {
+    @include all-buttons; 
+    margin-top: 50px; 
 }

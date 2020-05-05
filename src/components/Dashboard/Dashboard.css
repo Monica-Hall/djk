@@ -20,9 +20,67 @@
   font-size: 70px;
   color: white;
   margin-bottom: 0;
-  margin-top: 0;
+  margin-top: 80px;
   text-shadow: 1px 1px 15px black, 1px -1px 15px black, -1px 1px 15px black, -1px -1px 15px black;
   -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: black;
+}
+
+.queue-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 70vw;
+  font-size: 30px;
+  color: black;
+  margin-top: 0px;
+  text-shadow: 0 0 20px #1DEE19;
+  -webkit-filter: drop-shadow(20px 10px 6px rgba(0, 0, 0, 0.6));
+          filter: drop-shadow(20px 10px 6px rgba(0, 0, 0, 0.6));
+  -webkit-text-stroke-width: .9px;
+  -webkit-text-stroke-color: #1DEE19;
+}
+
+.option-button {
+  margin: 5px;
+  height: 20px;
+  width: 80px;
+  color: white;
+  background-color: black;
+  font-size: 12px;
+  padding: 0 10px;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.option-button:hover {
+  border: 1px solid #1DEE19;
+  -webkit-box-shadow: 0 0 30px #1DEE19;
+          box-shadow: 0 0 30px #1DEE19;
+}
+
+.sign-out {
+  height: 30px;
+  width: 100px;
+  color: white;
+  background-color: black;
+  font-size: 16px;
+  padding: 0 10px;
+  border: none;
+  margin-top: 50px;
+}
+
+.sign-out:hover {
+  border: 1px solid #1DEE19;
+  -webkit-box-shadow: 0 0 30px #1DEE19;
+          box-shadow: 0 0 30px #1DEE19;
 }
 /*# sourceMappingURL=Dashboard.css.map */

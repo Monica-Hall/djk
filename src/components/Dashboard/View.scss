@@ -4,15 +4,29 @@
 .queue {
     display: flex; 
     flex-direction: row;
-    width: 80vw; 
+    width: 70vw; 
 
 }
 
-.test {
+.row {
     display: flex; 
     flex-direction: row;
-    background-color: $green;
-    width: 100vw; 
+    background-color: $black;
+    width: 70vw; 
+    height: 40px; 
     justify-content: space-evenly;
-    font-size: 16px; 
+    text-align: center;
+    font-size: 18px; 
+    color: $white;
+    border: 1px solid $green;
+    margin: 6px; 
+
+    &:hover {
+        box-shadow: 0 0 30px $green; 
+    }
+  
+}
+
+.column {
+    width: 30%; 
 }

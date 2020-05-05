@@ -27,51 +27,54 @@ export default class View extends Component {
 
         return (
             <div className="song-list">
+               
                 <div className="queue">
+                    
                 {
                     is_admin
                     ?
-                    <div className="test">
-                        <div>
+                    <div className="row">
+                        <div className="column">
                             {name}
                         </div>
 
-                        <div>
+                        <div className="column">
                             {artist}
                         </div>
 
-                        <div>
+                        <div className="column">
                             {title}
                         </div>
 
-                        <div>
+                        <div className="column">
                             {requests}
                         </div>
 
-                        <div>
+                        <div className="column">
                             {complete ? "yes": "no"}
                         </div>
-                        <button onClick={() => deleteSong(form_id)}>delete</button>
+                        <button className ="option-button" onClick={() => deleteSong(form_id)}>delete</button>
                     </div>
                     :
-                    <div className="test">
-                        <div>
+                    <div className="row">
+                        <div className="column">
                             {name}
                         </div>
 
-                        <div>
+                        <div className="column">
                             {artist}
                         </div>
 
-                        <div>
+                        <div className="column">
                             {title}
                         </div>
-                        
+                        </div>
+    }
                         {
                             +singer === +user_id &&
                             <div>
-                            <button onClick={() => deleteSong(form_id)}>delete</button>
-                            <button onClick={() => this.toggleEdit()}>edit</button>
+                            <button className ="option-button" onClick={() => deleteSong(form_id)}>delete</button>
+                            <button className ="option-button" onClick={() => this.toggleEdit()}>edit</button>
                             </div>
                         }
                 
@@ -84,8 +87,7 @@ export default class View extends Component {
                             getSongs={getSongs}
                             /> 
                         }                            
-                    </div>
-                }
+                
                 </div>
                 
             </div>

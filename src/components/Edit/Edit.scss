@@ -1,0 +1,18 @@
+@import "../../Styles/mixins.scss", "../../Styles/colors.scss";
+
+.edit-option {
+    margin: 5px; 
+    height: 20px; 
+    width: 80px; 
+    color: $white; 
+    background-color: $black;
+    font-size: 12px; 
+    padding: 0 10px; 
+    border: none; 
+    display: flex;
+
+    &:hover {
+        border: 1px solid $green; 
+        box-shadow: 0 0 30px $green; 
+    }
+}

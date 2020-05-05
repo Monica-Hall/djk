@@ -6,10 +6,10 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 80vw;
+  width: 70vw;
 }
 
-.test {
+.row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -17,11 +17,25 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  background-color: #1DEE19;
-  width: 100vw;
+  background-color: black;
+  width: 70vw;
+  height: 40px;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  font-size: 16px;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  border: 1px solid #1DEE19;
+  margin: 6px;
+}
+
+.row:hover {
+  -webkit-box-shadow: 0 0 30px #1DEE19;
+          box-shadow: 0 0 30px #1DEE19;
+}
+
+.column {
+  width: 30%;
 }
 /*# sourceMappingURL=View.css.map */

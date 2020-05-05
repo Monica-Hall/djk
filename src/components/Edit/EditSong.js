@@ -1,6 +1,7 @@
 import React, { Component } from "react"; 
 import {editSong} from "../../redux/reducers/songs"
 import {connect} from "react-redux"
+import "./Edit.css"
 
 class EditSong extends Component {
     constructor(props) {
@@ -45,9 +46,9 @@ class EditSong extends Component {
                             onChange={(e) => this.handleChange(e.target.name, e.target.value)}
                             placeholder="enter song title..."
                         />
-                        <button>save</button>
+                        <button className="edit-option">save</button>
                 </form>
-                <button onClick={this.props.toggleEdit}>cancel</button>
+                <button className="edit-option" onClick={this.props.toggleEdit}>cancel</button>
             </div>
         )
     }
